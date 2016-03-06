@@ -13,7 +13,9 @@ Instructions for building Strato:
   2. mgit: tool at http://github.com/blockapps/mgit.  After the installation, you will have a command line tool called "mgit".
 ```
   > git clone https://github.com/blockapps/mgit.git
+  > cd mgit
   > cabal configure && cabal build && cabal install
+  > echo 'PATH="$HOME/.cabal/bin:$PATH"' >> ~/.profile
 ```  
   3. Postgresql
   4. LevelDB
@@ -23,5 +25,5 @@ Instructions for building Strato:
 ```
     > mgit clone http://github.com/blockapps/strato
     > cd strato
-    > stack install
+    > sudo stack install --allow-different-user
 ```
